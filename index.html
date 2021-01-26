@@ -1,42 +1,37 @@
 
 <!DOCTYPE html>
-<html>
+
+    <html>
 <head>
-<title>user</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<style type="text/css">
-#b{
-	text-align: center;
-}
-#j{
-    margin-top: 300px;
-}
-</style>
-</head>
-<body id="b">
+    <style>
+       #body{
+           text-align: center;
+       } 
+       #j{
+           margin-top: 300px;
+           padding: 10px 40px;
+       }
+    </style>
+    <body id='body'>
+    <button onclick="change();" id="j">CLICK HERE</button>
 
-<button onmouseover="a()" id="j" style="padding: 10px 40px;">Repaint</button>
 <script>
-
-function a(){
-	var h = [
-
-
-'#ff0000',
-'#00ff00',
-'#0000ff',
-'#e600e6',
-'#ffff00',
-'#00ffff'
-]
-
-counter = 1
-	 	setInterval(() =>{
-     document.getElementById('b').style.backgroundColor = h[counter = ++counter % 10];
-       }, 200);
-}
-
-
+    var colors =["#e74c3c",
+    "#3498db",
+    "#2ecc71",
+    "#95a5a6",
+    "#f1c40f",
+    "#e74c3c"];
+    var abhi = 0;
+    function change() {
+        var col = document.getElementById("body");
+        if( abhi >= colors.length ) {
+            abhi = 0;
+        }
+        col.style.backgroundColor = colors[abhi];
+        abhi++;
+    }
 </script>
-</body>
-</html>
+    
+    </body>
+</html
