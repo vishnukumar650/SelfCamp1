@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+#b{
+	text-align: center;
+}
+#j{
+    margin-top: 300px;
+}
+</style>
+</head>
+<body id="b">
+
+<button onmouseover="a()" id="j" style="padding: 10px 40px;">Repaint</button>
+<script>
+
+function a(){
+	var h = [
+
+
+'#ff0000',
+'#00ff00',
+'#0000ff',
+'#e600e6',
+'#ffff00',
+'#00ffff'
+]
+
+counter = 1
+	 	setInterval(() =>{
+     document.getElementById('b').style.backgroundColor = h[counter = ++counter % 10];
+       }, 200);
+}
+
+
+</script>
+</body>
+</html>
