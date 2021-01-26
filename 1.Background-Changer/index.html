@@ -1,14 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<title>user</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+#b{
+	text-align: center;
+}
+#j{
+    margin-top: 300px;
+}
+</style>
 </head>
-<body>
+<body id="b">
+    <button onmouseover="a()" id="j">Repaint</button>
+
+
+<script>
+
+function a(){
+	var h = [
+
+
+'#ff6200',
+'#ff6600',
+'#00ff00',
+'#ff6e00',
+'#ff7300',
+'#00FF00',
+'#FFFF00',
+'#FF8C00',
+'#00FF7F'
+
+
+]
+counter = 1
+    k = h.length;
     
-    <h1>Project 1</h1>
-    <p>welcome</p>
-    
+	function l(){
+		
+ document.getElementById('b').style.backgroundColor = h[counter = ++counter % k];
+	
+    }
+        	setInterval(l, 250);
+
+}
+
+</script>
 </body>
 </html>
