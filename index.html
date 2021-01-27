@@ -1,37 +1,24 @@
-
 <!DOCTYPE html>
-
-    <html>
+<html lang="en">
 <head>
-    <style>
-       #body{
-           text-align: center;
-       } 
-       #j{
-           margin-top: 300px;
-           padding: 10px 40px;
-       }
-    </style>
-    <body id='body'>
-    <button onclick="change();" id="j">CLICK HERE</button>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
 <script>
-    var colors =["#e74c3c",
-    "#3498db",
-    "#2ecc71",
-    "#95a5a6",
-    "#f1c40f",
-    "#e74c3c"];
-    var abhi = 0;
-    function change() {
-        var col = document.getElementById("body");
-        if( abhi >= colors.length ) {
-            abhi = 0;
-        }
-        col.style.backgroundColor = colors[abhi];
-        abhi++;
+     function generateRandomHexCode() {
+    let hexCode = "#" 
+
+    while ( hexCode.length < 7 ) {
+      hexCode += (Math.round(Math.random() * 15)).toString(16) 
     }
+
+    return hexCode 
+  }
+
 </script>
-    
-    </body>
-</html
+
+   
+</body>
+</html>
